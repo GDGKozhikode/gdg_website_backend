@@ -25,9 +25,18 @@ class OrganizerSerializer(serializers.ModelSerializer):
 
 
 class EventSerializer(serializers.ModelSerializer):
+    venue = serializers.SerializerMethodField()
+    speakers = serializers.SerializerMethodField()
+
     class Meta:
         model = Event
         fields = '__all__'
+
+    def get_venue(self, obj):
+        return obj.venue.address
+
+    def get_speakers(self, obj):
+        return obj.speakers.values_list('name', flat=True)
 
 
 class SupporterSerializer(serializers.ModelSerializer):

@@ -15,8 +15,10 @@ class SocialLink(models.Model):
 
 class Location(models.Model):
     address = models.CharField(max_length=200)
-    latitude = models.DecimalField(max_digits=12, decimal_places=10)
-    longitude = models.DecimalField(max_digits=13, decimal_places=10)
+    latitude = models.DecimalField(max_digits=12, decimal_places=10, null=True,
+                                   blank=True)
+    longitude = models.DecimalField(max_digits=13, decimal_places=10,
+                                    null=True, blank=True)
 
 
 class Organizer(models.Model):
@@ -43,25 +45,26 @@ class Speaker(models.Model):
     name = models.CharField(max_length=50)
     photo = models.ImageField(upload_to='images/speakers', null=True,
                               blank=True)
-    company = models.CharField(max_length=50)
-    designation = models.CharField(max_length=50)
-    contact_number = models.CharField(max_length=20, validators=[phone_regex])
-    email_id = models.EmailField(max_length=255)
-    social_link = models.ForeignKey(SocialLink)
+    company = models.CharField(max_length=50, null=True, blank=True)
+    designation = models.CharField(max_length=50, null=True, blank=True)
+    contact_number = models.CharField(max_length=20, validators=[phone_regex],
+                                      null=True, blank=True)
+    email_id = models.EmailField(max_length=255, null=True, blank=True)
+    social_link = models.ForeignKey(SocialLink, null=True, blank=True)
 
 
 class Event(models.Model):
     name = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='images/events', null=True, blank=True)
-    event_type = models.CharField(max_length=50)
-    technology = models.CharField(max_length=50)
+    event_type = models.CharField(max_length=50, null=True, blank=True)
+    technology = models.CharField(max_length=50, null=True, blank=True)
     date = models.DateField()
     start_time = models.TimeField(null=True, blank=True)
     end_time = models.TimeField(null=True, blank=True)
     venue = models.ForeignKey(Location)
     description = models.TextField()
     registration_link = models.URLField()
-    speaker = models.ForeignKey(Speaker)
+    speakers = models.ManyToManyField(Speaker)
 
 
 class EventImage(models.Model):
