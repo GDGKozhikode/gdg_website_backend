@@ -3,15 +3,30 @@ GDG Kozhikode - Community Website Backend
 
 # Setup
 * Start postgres
-```bash
-$ psql
-```
+
 * create db with name website
 ```bash
+$ psql
 $ CREATE DATABASE website;
 $ \q
 ```
-* Migate to database
+* Create a virtualenv(with wrapper) with python3
+```bash
+$ mkvirtualenv -p python3 gdg    
+```
+* cd into the project folder
+```bash
+$ cd website
+```
+* Install requirements
+```bash
+$ pip install requirements/local.txt
+```
+* Create super-user
+```bash
+$ python manage.py createsuperuser --settings=config.settings.local
+```
+* Migate database
 ```bash
 $ python manage.py migrate --settings=config.settings.local
 ```
@@ -19,7 +34,7 @@ $ python manage.py migrate --settings=config.settings.local
 ```bash
 $ python manage.py collectstatic --settings=config.settings.local
 ```
-# Theme loader - (default:django)
+# Admin Theme loader - (default:django)
 * Bootstrap
 ```bash
 python manage.py loaddata admin_interface_theme_bootstrap.json --settings=config.settings.local
