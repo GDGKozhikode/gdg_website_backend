@@ -1,0 +1,11 @@
+# Test dependencies go here.
+-r base.txt
+
+coverage==4.5.1
+flake8==3.5.0
+django-test-plus==1.0.22
+
+# pytest
+pytest-django==3.1.2
+# for mytest visual look    
+pytest-sugar==0.9.1
