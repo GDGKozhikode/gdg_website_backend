@@ -1,6 +1,6 @@
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 2
+ROOT_DIR = environ.Path(__file__) - 3
 # (website/settings/base.py - 3 = website/)
 APPS_DIR = ROOT_DIR.path('website')
 # Load operating system environment variables and then prepare to use them
@@ -80,9 +80,9 @@ STATIC_URL = '/static/'
 
 # URL Configuration
 # ----------------------------------------------------------------------------
-ROOT_URLCONF = 'website.urls'
+ROOT_URLCONF = 'config.urls'
 
-WSGI_APPLICATION = 'website.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 # EMAIL CONFIGURATION
 # ----------------------------------------------------------------------------
@@ -144,5 +144,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # MIGRATIONS CONFIGURATION
 # ----------------------------------------------------------------------------
 
+# Location of root django.contrib.admin URL, use {% url 'admin:index' %}
+ADMIN_URL = r'^admin/'
 # Common stuff: Below this line define 3rd party library settings
 # ----------------------------------------------------------------------------

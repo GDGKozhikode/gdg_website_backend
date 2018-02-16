@@ -8,7 +8,6 @@ Local settings for website project.
 - Add Django Debug Toolbar
 - Add django-extensions as app
 """
-
 from .base import *
 
 # DEBUG
@@ -32,7 +31,7 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
                     default='django.core.mail.backends.console.EmailBackend')
 
 # django-debug-toolbar
-# # ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware', ]
 # THIRD_PARTY_APPS += ['debug_toolbar', ]
 
