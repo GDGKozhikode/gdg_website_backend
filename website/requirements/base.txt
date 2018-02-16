@@ -9,3 +9,6 @@ psycopg2==2.7.4
 
 # Configuration
 django-environ==0.4.4
+
+# Images
+Pillow==5.0.0
