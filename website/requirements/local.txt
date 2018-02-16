@@ -1,0 +1,11 @@
+# Local development dependencies go here
+-r base.txt
+
+# the browser debugger. (NOT YET CONFIGURED)
+#django-debug-toolbar==1.9.1
+
+# extends the django manage command
+django-extensions==1.9.9
+
+# The WSGI debugger within the browser
+Werkzeug==0.14.1

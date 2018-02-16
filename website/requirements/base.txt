@@ -1,0 +1,11 @@
+# Conservative Django
+Django==2.0.2
+
+# Admin interface themes 
+django-admin-interface==0.6.3
+
+# Python-PostgreSQL Database Adapter
+psycopg2==2.7.4
+
+# Configuration
+django-environ==0.4.4
