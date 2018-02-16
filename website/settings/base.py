@@ -1,6 +1,5 @@
 import environ
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 ROOT_DIR = environ.Path(__file__) - 2
 # (website/settings/base.py - 3 = website/)
 APPS_DIR = ROOT_DIR.path('website')
@@ -9,14 +8,6 @@ env = environ.Env(DEBUG=(bool, False),)  # set default values and casting
 
 env_file = str(ROOT_DIR.path('.env'))
 env.read_env(env_file)
-
-DEBUG = env('DEBUG')  # False if not in os.environ
-TEMPLATE_DEBUG = DEBUG
-
-ALLOWED_HOSTS = []
-
-SECRET_KEY = env('SECRET_KEY')
-# Raises ImproperlyConfigured exception if SECRET_KEY not in os.environ
 
 # APP CONFIGURATION
 # ----------------------------------------------------------------------------
@@ -53,6 +44,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# DEBUG
+# ----------------------------------------------------------------------------
+DEBUG = env.bool('DJANGO_DEBUG', False)
 
 # TEMPLATE CONFIGURATION
 # ----------------------------------------------------------------------------
@@ -64,6 +58,7 @@ TEMPLATES = [
         ],
         'APP_DIRS': True,
         'OPTIONS': {
+            'debug': DEBUG,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -74,21 +69,33 @@ TEMPLATES = [
     },
 ]
 
+# STATIC & MEDIA FILE CONFIGURATION
+# ----------------------------------------------------------------------------
+
+# PUBILC_DIR = ROOT_DIR.path()
+MEDIA_ROOT = str(ROOT_DIR.path('media'))
+MEDIA_URL = '/media/'
+STATIC_ROOT = str(ROOT_DIR.path('staticfiles'))
+STATIC_URL = '/static/'
+
 # URL Configuration
 # ----------------------------------------------------------------------------
 ROOT_URLCONF = 'website.urls'
 
 WSGI_APPLICATION = 'website.wsgi.application'
 
+# EMAIL CONFIGURATION
+# ----------------------------------------------------------------------------
+EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
+                    default='django.core.mail.backends.smtp.EmailBackend')
 
 # DATABASE CONFIGURATION
 # ----------------------------------------------------------------------------
+# Uses django-environ to accept uri format
 DATABASES = {
-    # 'default': env.db(),
-    'default': env.db('SQLITE_URL', default='sqlite:///tmp/my-tmp-sqlite.db'),
-    # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    'extra': env.db('SQLITE_URL', default='sqlite:///tmp/my-tmp-sqlite.db')
+    'default': env.db('DATABASE_URL', default='psql:///website'),
 }
+# DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 
 # GENERAL CONFIGURATION
@@ -104,16 +111,6 @@ USE_L10N = True
 USE_TZ = True
 
 SITE_ID = 1
-
-
-# STATIC & MEDIA FILE CONFIGURATION
-# ----------------------------------------------------------------------------
-
-# PUBILC_DIR = ROOT_DIR.path()
-MEDIA_ROOT = str(ROOT_DIR.path('media'))
-MEDIA_URL = '/media/'
-STATIC_ROOT = str(ROOT_DIR.path('staticfiles'))
-STATIC_URL = '/static/'
 
 # PASSWORD VALIDATION
 # ----------------------------------------------------------------------------
@@ -139,9 +136,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # ----------------------------------------------------------------------------
 
 # MANAGER CONFIGURATION
-# ----------------------------------------------------------------------------
-
-# EMAIL CONFIGURATION
 # ----------------------------------------------------------------------------
 
 # FIXTURE CONFIGURATION
