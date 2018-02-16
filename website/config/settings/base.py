@@ -27,6 +27,8 @@ THIRD_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
+    'social',
+    'organizers',
 
 ]
 
