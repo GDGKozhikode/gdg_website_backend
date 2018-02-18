@@ -26,7 +26,10 @@ class Organizer(SocialLinks):
 
     email = models.EmailField(max_length=70, blank=False, unique=True)
 
-    photo = models.ImageField(upload_to='organiser/', blank=True)
+    photo = models.ImageField(upload_to='organisers/', blank=True)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+            verbose_name_plural = "organizers"
