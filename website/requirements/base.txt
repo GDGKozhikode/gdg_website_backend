@@ -12,3 +12,6 @@ django-environ==0.4.4
 
 # Images
 Pillow==5.0.0
+
+# Location
+django-geoposition==0.3.0
