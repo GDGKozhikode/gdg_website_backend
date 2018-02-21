@@ -24,11 +24,13 @@ THIRD_PARTY_APPS = [
     'admin_interface',
     'flat_responsive',
     'colorfield',
+    'geoposition',
 ]
 
 PROJECT_APPS = [
     'social',
     'organizers',
+    'supporters',
 
 ]
 
@@ -150,3 +152,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ADMIN_URL = r'^admin/'
 # Common stuff: Below this line define 3rd party library settings
 # ----------------------------------------------------------------------------
+
+# Google map API
+GEOPOSITION_GOOGLE_MAPS_API_KEY = env('MAPS_API_KEY')
