@@ -7,3 +7,6 @@ admin-interface*
 
 # Testing
 .pytest_cache
+
+# Static files & folders
+media
