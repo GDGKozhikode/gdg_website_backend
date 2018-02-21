@@ -31,6 +31,7 @@ PROJECT_APPS = [
     'social',
     'organizers',
     'supporters',
+    'speakers',
 
 ]
 
