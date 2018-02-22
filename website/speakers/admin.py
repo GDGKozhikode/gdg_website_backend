@@ -11,7 +11,7 @@ class SpeakerAdmin(admin.ModelAdmin):
             'fields': ('name', 'company', 'designation', 'contact_no', 'email', 'photo')
         }),
         ('Social Links', {
-            'fields': ('facebook', 'twitter', 'linkedin', 'google_plus', 'github')
+            'fields': ('facebook', 'twitter', 'linkedin', 'google_plus', 'github', 'stackoverflow')
         }),
     )
 

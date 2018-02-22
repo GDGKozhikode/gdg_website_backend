@@ -11,7 +11,7 @@ class OrganizerAdmin(admin.ModelAdmin):
             'fields': ('name', 'desigination', 'contact_no', 'email', 'photo')
         }),
         ('Social Links', {
-            'fields': ('facebook', 'twitter', 'linkedin', 'google_plus', 'github')
+            'fields': ('facebook', 'twitter', 'linkedin', 'google_plus', 'github', 'stackoverflow')
         }),
     )
 
