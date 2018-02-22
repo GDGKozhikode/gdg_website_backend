@@ -32,6 +32,7 @@ PROJECT_APPS = [
     'organizers',
     'supporters',
     'speakers',
+    'events',
 
 ]
 
