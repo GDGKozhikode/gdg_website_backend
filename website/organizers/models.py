@@ -14,7 +14,7 @@ class Organizer(SocialLinks):
         (CONTRIBUTOR, 'contributor')
     )
 
-    desigination = models.CharField(max_length=3,
+    role = models.CharField(max_length=3,
                                     choices=DESIGINATION,
                                     default=CONTRIBUTOR)
 

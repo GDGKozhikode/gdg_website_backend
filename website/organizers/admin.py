@@ -5,10 +5,10 @@ from .models import Organizer
 
 class OrganizerAdmin(admin.ModelAdmin):
     model = Organizer
-    list_display = ('name', 'desigination', 'contact_no', 'email')
+    list_display = ('name', 'role', 'contact_no', 'email')
     fieldsets = (
         (None, {
-            'fields': ('name', 'desigination', 'contact_no', 'email', 'photo')
+            'fields': ('name', 'role', 'contact_no', 'email', 'photo')
         }),
         ('Social Links', {
             'fields': ('facebook', 'twitter', 'linkedin', 'google_plus', 'github', 'stackoverflow')
