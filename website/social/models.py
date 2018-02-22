@@ -7,6 +7,7 @@ class SocialLinks(models.Model):
     linkedin = models.URLField(max_length=200, blank=True)
     google_plus = models.URLField(max_length=200, blank=True)
     github = models.URLField(max_length=200, blank=True)
+    stackoverflow = models.URLField(max_length=200, blank=True)
 
     class Meta:
         abstract = True
