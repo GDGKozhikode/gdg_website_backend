@@ -1,0 +1,222 @@
+[
+  {
+    "model": "admin_interface.theme",
+    "pk": 1,
+    "fields": {
+      "name": "GDG",
+      "active": true,
+      "title": "GDG Kozhikode administration",
+      "title_color": "#F5DD5D",
+      "title_visible": false,
+      "logo": "admin-interface/logo/logo.png",
+      "logo_color": "#FFFFFF",
+      "logo_visible": true,
+      "favicon": "admin-interface/favicon/fav.ico",
+      "env": "development",
+      "env_visible": true,
+      "css_header_background_color": "#FFFFFF",
+      "css_header_text_color": "#000000",
+      "css_header_link_color": "#000000",
+      "css_header_link_hover_color": "#4A148C",
+      "css_module_background_color": "#448AFF",
+      "css_module_text_color": "#FFFFFF",
+      "css_module_link_color": "#FFFFFF",
+      "css_module_link_hover_color": "#000000",
+      "css_module_rounded_corners": true,
+      "css_generic_link_color": "#D50000",
+      "css_generic_link_hover_color": "#F50057",
+      "css_save_button_background_color": "#00BA4D",
+      "css_save_button_background_hover_color": "#469C10",
+      "css_save_button_text_color": "#FFFFFF",
+      "css_delete_button_background_color": "#BA2121",
+      "css_delete_button_background_hover_color": "#A41515",
+      "css_delete_button_text_color": "#FFFFFF",
+      "css": "",
+      "related_modal_active": true,
+      "related_modal_background_color": "#000000",
+      "related_modal_background_opacity": "0.3",
+      "related_modal_rounded_corners": true,
+      "list_filter_dropdown": false,
+      "recent_actions_visible": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$X6lfRcPH1OUy$cCmauX+a9ZgkY5GiPNY6RAbBCxvy1kDsQcQN+kHciiM=",
+      "last_login": "2018-02-23T06:36:02.675Z",
+      "is_superuser": false,
+      "username": "demo",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2018-02-23T06:19:20Z",
+      "groups": [],
+      "user_permissions": [
+        31,
+        32,
+        33,
+        22,
+        23,
+        24,
+        28,
+        29,
+        30,
+        25,
+        26,
+        27
+      ]
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ns6clg2fpuwohzi4tjf2lwtv9xl6wpfn",
+    "fields": {
+      "session_data": "MDAyMmQ4ZDlmZGY3YjAwNmI1NTkzYWI3OGFhZWZiNGZiMDE5NzRlNDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyNmQwMWIzZDg0MWJkYTU1ZTQ0NjQ3YjNjYzkyZTNmMzJmNmUzYjYwIn0=",
+      "expire_date": "2018-03-09T06:36:02.678Z"
+    }
+  },
+  {
+    "model": "supporters.supporter",
+    "pk": 1,
+    "fields": {
+      "name": "UL Cyber Park",
+      "photo": "supporters/logo.png",
+      "location": "11.255069,75.82859200000007",
+      "website": "http://www.ulcyberpark.com/"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2018-02-22T09:30:43.158Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "GDG",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"name\", \"logo\", \"favicon\", \"title_visible\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2018-02-22T09:33:17.644Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "GDG",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"title\", \"css_header_background_color\", \"css_header_text_color\", \"css_header_link_color\", \"css_header_link_hover_color\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2018-02-22T09:34:32.969Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "GDG",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"css_header_background_color\", \"css_module_background_color\", \"css_save_button_background_color\", \"css_save_button_background_hover_color\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2018-02-22T09:35:00.530Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "GDG",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"css_save_button_background_hover_color\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2018-02-22T09:36:06.675Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "GDG",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"css_generic_link_color\", \"css_generic_link_hover_color\", \"css_save_button_background_color\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2018-02-22T09:39:17.502Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "GDG",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"css_module_link_hover_color\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2018-02-23T05:42:45.823Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "UL Cyber Park",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2018-02-23T06:19:20.547Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "2",
+      "object_repr": "demo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2018-02-23T06:23:25.085Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "2",
+      "object_repr": "demo",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"user_permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2018-02-23T06:24:23.830Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "2",
+      "object_repr": "demo",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"is_staff\"]}}]"
+    }
+  }
+]
