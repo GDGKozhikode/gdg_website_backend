@@ -1,7 +1,7 @@
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3
-# (website/settings/base.py - 3 = website/)
+# (website/config/settings/base.py - 3 = website/)
 APPS_DIR = ROOT_DIR.path('website')
 # Load operating system environment variables and then prepare to use them
 env = environ.Env(DEBUG=(bool, False),)  # set default values and casting
@@ -83,6 +83,9 @@ MEDIA_ROOT = str(ROOT_DIR.path('media'))
 MEDIA_URL = '/media/'
 STATIC_ROOT = str(ROOT_DIR.path('staticfiles'))
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    str(APPS_DIR.path('static')),
+]
 
 # URL Configuration
 # ----------------------------------------------------------------------------
