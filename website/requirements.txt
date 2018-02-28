@@ -1,0 +1,3 @@
+#  Heroku requirements, same production.
+
+-r requirements/production.txt

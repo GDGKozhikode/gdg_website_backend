@@ -1,0 +1,19 @@
+# Pro-tip: Try not to put anything here. Avoid dependencies in
+# production that aren't in development.
+-r base.txt
+
+dj-database-url==0.4.2
+
+# WSGI Handler
+# ------------------------------------------------
+gunicorn==19.7.1
+
+# Static and Media Storage
+# ------------------------------------------------
+whitenoise==3.3.1
+
+
+
+
+
+
