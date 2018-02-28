@@ -2,8 +2,6 @@
 # production that aren't in development.
 -r base.txt
 
-dj-database-url==0.4.2
-
 # WSGI Handler
 # ------------------------------------------------
 gunicorn==19.7.1
