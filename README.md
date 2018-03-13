@@ -2,9 +2,9 @@
 GDG Kozhikode - Community Website Backend
 
 # Setup
-* Start postgres
+* Start postgres 
 
-* create db with name website
+* create db with name _website_
 ```bash
 $ psql
 $ CREATE DATABASE website;
@@ -34,6 +34,11 @@ $ python manage.py migrate --settings=config.settings.local
 ```bash
 $ python manage.py collectstatic --settings=config.settings.local
 ```
+* Run the server (*Make sure postgres server is running*)
+```bash
+$ python manage.py runserver_plus --settings=config.settings.local
+```
+
 # Admin Theme loader - (default:django)
 * Bootstrap
 ```bash
