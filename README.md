@@ -34,21 +34,18 @@ $ python manage.py migrate --settings=config.settings.local
 ```bash
 $ python manage.py collectstatic --settings=config.settings.local
 ```
+* Dumping the dummy DB data
+```bash
+$ python manage.py loaddata db.json --settings=config.settings.local
+```
 * Run the server (*Make sure postgres server is running*)
 ```bash
 $ python manage.py runserver_plus --settings=config.settings.local
 ```
 
-# Admin Theme loader - (default:django)
-* Bootstrap
-```bash
-python manage.py loaddata admin_interface_theme_bootstrap.json --settings=config.settings.local
-```
-* Foundation
-```bash
-python manage.py loaddata admin_interface_theme_foundation.json --settings=config.settings.local
-```
-* U.S. Web Design Standards 
-```bash
-python manage.py loaddata admin_interface_theme_uswds.json --settings=config.settings.local
-```
+# Using the admin panel
+*http://127.0.0.1:8000/admin/*
+
+### Login credentials
+_username_ : **demo** <br>
+_password_ : **gdgkozhikode**
