@@ -9,6 +9,4 @@ admin-interface*
 .pytest_cache
 
 # Static files & folders
-media
-
 notes
