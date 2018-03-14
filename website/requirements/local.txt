@@ -9,3 +9,7 @@ django-extensions==1.9.9
 
 # The WSGI debugger within the browser
 Werkzeug==0.14.1
+
+# Static and Media Storage
+# ------------------------------------------------
+whitenoise==3.3.1
