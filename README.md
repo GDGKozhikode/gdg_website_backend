@@ -2,9 +2,9 @@
 GDG Kozhikode - Community Website Backend
 
 # Setup
-* Start postgres 
+* Start postgres server
 
-* create db with name _website_
+* create db with name **website**
 ```bash
 $ psql
 $ CREATE DATABASE website;
@@ -12,7 +12,11 @@ $ \q
 ```
 * Create a virtualenv(with wrapper) with python3
 ```bash
-$ mkvirtualenv -p python3 gdg    
+$ mkvirtualenv -p python3 gdg   
+```
+* clone the **dev0** branch
+```bash
+$ git clone -b dev0 https://github.com/GDGKozhikode/gdg_website_backend.git
 ```
 * cd into the project folder
 ```bash
@@ -20,11 +24,7 @@ $ cd website
 ```
 * Install requirements
 ```bash
-$ pip install requirements/local.txt
-```
-* Create super-user
-```bash
-$ python manage.py createsuperuser --settings=config.settings.local
+$ pip install -r requirements/local.txt
 ```
 * Migate database
 ```bash
@@ -49,3 +49,7 @@ $ python manage.py runserver_plus --settings=config.settings.local
 ### Login credentials
 _username_ : **demo** <br>
 _password_ : **gdgkozhikode**
+
+<p align="center">
+  <b>Made with ♥ by GDG Kozhikode Contributors</b><br>
+</p>
