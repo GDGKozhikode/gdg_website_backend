@@ -26,7 +26,7 @@ $ cd website
 ```bash
 $ pip install -r requirements/local.txt
 ```
-* Migate database
+* Migrate database
 ```bash
 $ python manage.py migrate --settings=config.settings.local
 ```
